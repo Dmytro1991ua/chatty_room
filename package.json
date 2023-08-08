@@ -1,0 +1,19 @@
+{
+  "name": "chatty_room",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmytro1991ua/chatty_room.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmytro1991ua/chatty_room/issues"
+  },
+  "homepage": "https://github.com/Dmytro1991ua/chatty_room#readme",
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}
