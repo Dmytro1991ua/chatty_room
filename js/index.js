@@ -7,10 +7,12 @@ const wsProtocol = isSecureConnection ? "wss://" : "ws://";
 
 const socket = new WebSocket(`${wsProtocol}localhost:8080`);
 
-function onAddNewMessage(message) {
+function onAddNewMessage(message, isUserMessage) {
   if (message) {
+    const customClass = isUserMessage ? "user" : "other";
+
     const html = `
-       <p class="chat__message">${message}</p>
+       <p class="chat__message ${customClass}">${message}</p>
        `;
 
     const position = "beforeend";
@@ -31,7 +33,7 @@ function onFormSubmit(e) {
   if (socket.readyState === WebSocket.OPEN) {
     socket.send(JSON.stringify({ type: "message", data: message }));
 
-    onAddNewMessage(message);
+    onAddNewMessage(message, true);
 
     inputValue.value = "";
   } else {
@@ -43,7 +45,7 @@ socket.addEventListener("message", function (event) {
   const data = JSON.parse(event.data);
 
   if (data.type === "message") {
-    onAddNewMessage(data.data);
+    onAddNewMessage(data.data, false);
   }
 });
 
