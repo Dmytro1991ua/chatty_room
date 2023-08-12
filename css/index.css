@@ -100,6 +100,8 @@ h1 {
 }
 
 .chat__content {
+  display: flex;
+  flex-direction: column;
   max-height: 24rem;
   overflow: auto;
 
@@ -109,16 +111,25 @@ h1 {
 }
 
 .chat__message {
-  max-width: 8rem;
+  width: fit-content;
   padding: 1rem;
   margin-bottom: 2rem;
   border-radius: 1rem;
   background-color: var(--color-mantis-darker);
 
   @media (width >= 48rem) {
-    max-width: 10rem;
     padding: 2rem;
   }
+}
+
+.chat__message.user {
+  align-self: flex-start;
+  background-color: var(--color-mantis);
+}
+
+.chat__message.other {
+  align-self: flex-end;
+  background-color: var(--color-mantis-darker);
 }
 
 .chat__form {
