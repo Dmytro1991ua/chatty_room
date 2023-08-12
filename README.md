@@ -7,6 +7,9 @@ This is a simple real chat application built using WebSocket, allowing users to 
 - Simple and intuitive web interface.
 - Local development setup for easy testing.
 
+## Screenshots
+![example-1](https://github.com/Dmytro1991ua/chatty_room/assets/61331410/448b46c4-7c6d-4015-a045-df9647d96f40)
+
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 
